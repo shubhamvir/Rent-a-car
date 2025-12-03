@@ -12,7 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     //   data from the database
-    $retrieve_agency_query = "SELECT * FROM Users WHERE username='$agency_username' AND user_type='agency'";
+    //$retrieve_agency_query = "SELECT * FROM Users WHERE username='$agency_username' AND user_type='agency'";
+    $stmt = $conn->prepare("SELECT * FROM Users WHERE username=? AND user_type='agency'");
+$stmt->bind_param("s", $agency_username);
+$stmt->execute();
+$result = $stmt->get_result();
     $result = $conn->query($retrieve_agency_query);
 
     if ($result->num_rows == 1) {
