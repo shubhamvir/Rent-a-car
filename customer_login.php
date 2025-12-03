@@ -10,7 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $customer_password = $_POST["password"];
 
     // select query
-    $retrieve_customer_query = "SELECT * FROM Users WHERE username='$customer_username' AND user_type='customer'";
+    //$retrieve_customer_query = "SELECT * FROM Users WHERE username='$customer_username' AND user_type='customer'";
+    $stmt = $conn->prepare("SELECT * FROM Users WHERE username=? AND user_type='customer'");
+$stmt->bind_param("s", $customer_username);
+$stmt->execute();
+$result = $stmt->get_result();
     $result = $conn->query($retrieve_customer_query);
 
     if ($result->num_rows == 1) {
