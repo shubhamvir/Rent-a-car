@@ -14,9 +14,13 @@ $agency_password = $_POST["agency_password"];
 $hashedPassword = password_hash($agency_password, PASSWORD_DEFAULT);
 
 // Insert query
-$insert_query = "INSERT INTO Users (username, password, user_type, name) VALUES ('$agency_username', '$hashedPassword',
-'agency', '$agency_name')";
-if ($conn->query($insert_query) === TRUE) {
+//$insert_query = "INSERT INTO Users (username, password, user_type, name) VALUES ('$agency_username', '$hashedPassword',
+//'agency', '$agency_name')";
+    //Fixed code
+$stmt = $conn->prepare("INSERT INTO Users (username, password, user_type, name) VALUES (?, ?, 'agency', ?)");
+$stmt->bind_param("sss", $agency_username, $hashedPassword, $agency_name);
+$stmt->execute();
+    if ($conn->query($insert_query) === TRUE) {
 $_SESSION["registration_success"] = "Registration successful. Please login.";
 header("Location: agency_login.php");
 exit();
