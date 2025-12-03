@@ -15,7 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashedPassword = password_hash($customer_password, PASSWORD_DEFAULT);
 
     // Insert customer data into the database
-    $query = "INSERT INTO Users (username, password, user_type, name) VALUES ('$customer_username', '$hashedPassword', 'customer', '$customer_name')";
+    //$query = "INSERT INTO Users (username, password, user_type, name) VALUES ('$customer_username', '$hashedPassword', 'customer', '$customer_name')";
+    $stmt = $conn->prepare("INSERT INTO Users (username, password, user_type, name) VALUES (?, ?, 'customer', ?)");
+$stmt->bind_param("sss", $customer_username, $hashedPassword, $customer_name);
+$stmt->execute();
+
     $result = $conn->query($query);
     if ($result === TRUE) {
         // Registration successful
