@@ -1,5 +1,7 @@
 <?php
-session_start();
+require_once 'security.php'; // Add this line
+
+//session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // database connection
