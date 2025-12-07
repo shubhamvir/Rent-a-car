@@ -1,5 +1,7 @@
 <?php
-session_start();
+require_once 'security.php'; // Add this line
+
+//session_start();
 ?>
 
 
