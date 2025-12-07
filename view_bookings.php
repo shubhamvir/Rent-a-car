@@ -24,10 +24,15 @@ session_start();
         include 'db_connect.php';
 
         // Fetch bookings with additional details from the database using a JOIN query
-        $query = "SELECT b.booking_id, b.car_id, b.customer_id, b.start_date, b.days_rented, c.model, c.vehicle_number, c.seating_capacity, c.rent_per_day, u.name AS user_name
-                  FROM Bookings b
-                  JOIN Cars c ON b.car_id = c.car_id
-                  JOIN Users u ON b.customer_id = u.user_id";
+    
+$query = "SELECT b.booking_id, b.car_id, b.customer_id, b.start_date, b.days_rented, 
+          c.model, c.vehicle_number, c.seating_capacity, c.rent_per_day, u.name AS user_name
+          FROM Bookings b
+          JOIN Cars c ON b.car_id = c.car_id
+          JOIN Users u ON b.customer_id = u.user_id";
+
+// ✅ FIXED (if you want to be thorough, but SELECT is lower risk)
+// Keep as is if no user input, or use prepared statements if adding search filters
         $result = $conn->query($query);
 
         if ($result->num_rows > 0) {
