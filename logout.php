@@ -1,6 +1,8 @@
 <?php
+require_once 'security.php'; // Add this line
+
 // Initialize the session
-session_start();
+//session_start();
  
 // Unset all of the session variables
 $_SESSION = array();
