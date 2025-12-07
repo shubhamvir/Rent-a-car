@@ -1,7 +1,7 @@
 <?php
-require_once 'security.php'; // Add this line
-
-//session_start();
+require_once 'security.php';
+require_once 'auth_check.php';
+require_agency();
 ?>
 
 
