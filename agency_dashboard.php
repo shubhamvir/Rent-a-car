@@ -1,10 +1,14 @@
 <?php
-require_once 'security.php'; // Add this line
+require_once 'security.php';
+require_once 'auth_check.php';
+require_agency(); // Add this line
+
+// Rest of your code...
+?>
 
 // Your existing session_start() and other code
 
 //session_start();
-?>
 
 
 
