@@ -3,7 +3,7 @@ require_once 'security.php'; // Add this line
 
 // Your existing session_start() and other code
 
-session_start();
+//session_start();
 ?>
 
 
