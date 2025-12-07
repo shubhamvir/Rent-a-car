@@ -1,6 +1,7 @@
 <?php
+require_once 'security.php'; // Add this line
 
-session_start();
+//session_start();
 //  database connection  
 include 'db_connect.php';
 // Query to retrieve available cars from the database
