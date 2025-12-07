@@ -1,5 +1,18 @@
 <?php
-require_once 'security.php'; // Add this line
+require_once 'validation.php';
+
+// Add before processing form
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Validate inputs
+    if (!validate_username($agency_username)) {
+        die("Invalid username format");
+    }
+    if (!validate_password($agency_password)) {
+        die("Password must be at least 8 characters with uppercase, lowercase and number");
+    }
+    
+    // Rest of your code...
+}
 
 //session_start();
 
