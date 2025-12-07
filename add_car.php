@@ -1,3 +1,8 @@
+<?php
+require_once 'security.php';
+
+// Your existing session_start() and other code
+?>
 <!-- Add New Cars Page -->
 
 <?php
