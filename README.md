@@ -105,24 +105,25 @@ auth_check.php - Authentication middleware
 **📁 Project Structure**
 text
 car-rental-system/
-├── assets/              # Images, icons, static files
-├── includes/            # PHP includes and security files
-│   ├── security.php     # Security configuration
-│   ├── validation.php   # Input validation functions
-│   └── auth_check.php   # Authentication middleware
-├── pages/               # Core application pages
-│   ├── customer_login.php
-│   ├── agency_login.php
-│   ├── agency_dashboard.php
-│   └── view_cars.php
-├── uploads/             # File upload directory (secured)
-├── backups/             # Database backups
-├── lib/                 # External libraries
-├── .htaccess            # Apache security rules
-├── carrental.sql        # Database schema
-├── db_connect.php       # Database configuration
-├── index.php           # Main landing page
-└── README.md           # This file
+assets/              # Images, icons, static files
+includes/            # PHP includes and security files
+security.php     # Security configuration
+validation.php   # Input validation functions
+auth_check.php   # Authentication middleware
+pages/               # Core application pages
+customer_login.php
+agency_login.php
+agency_dashboard.php
+view_cars.php
+uploads/             # File upload directory (secured)
+backups/             # Database backups
+lib/                 # External libraries
+.htaccess            # Apache security rules
+carrental.sql        # Database schema
+db_connect.php       # Database configuration
+index.php           # Main landing page
+README.md           # This file
+
 **🚀 Usage**
 For Customers
 Register an account
