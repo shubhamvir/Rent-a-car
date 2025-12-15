@@ -193,4 +193,13 @@ Sanitize all outputs
 Follow PHP PSR standards
 
 Comment complex logic
+👨‍💻 Author
+Your Name
+
+GitHub: shubhamvir
+
+Student ID: 24243981
+
+Project: Secure Web Applications
+
 
