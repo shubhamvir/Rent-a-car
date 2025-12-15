@@ -1,33 +1,14 @@
 🚗 Car Rental Web Application
 A secure, full-featured car rental web application with role-based access control, CRUD operations, and comprehensive security measures.
 
-📋 Table of Contents
-Features
-
-Technology Stack
-
-Installation
-
-Security Features
-
-Project Structure
-
-Usage
-
-Testing
-
-Contributing
-
-License
-
-✨ Features
-👥 User Roles
-Customers: Browse cars, make bookings, view rental history
+**✨ Features**
+**👥 User Roles
+**Customers: Browse cars, make bookings, view rental history
 
 Agencies: Manage car inventory, view bookings, update availability
 
-🔧 CRUD Operations
-✅ Create: User registration, car listings, bookings
+**🔧 CRUD Operations
+**✅ Create: User registration, car listings, bookings
 
 ✅ Read: Browse cars, view bookings, check availability
 
@@ -35,8 +16,8 @@ Agencies: Manage car inventory, view bookings, update availability
 
 ✅ Delete: Remove cars, cancel bookings
 
-🛡️ Security Implementation
-SQL Injection prevention using prepared statements
+**🛡️ Security Implementation
+**SQL Injection prevention using prepared statements
 
 XSS protection with input sanitization
 
@@ -48,7 +29,7 @@ CSRF protection
 
 Role-based access control
 
-🛠️ Technology Stack
+**🛠️ Technology Stack**
 Component	Technology
 Frontend	HTML5, CSS3, Bootstrap 5, JavaScript
 Backend	PHP 7.4+
@@ -103,7 +84,7 @@ $dbname = "carrental";
 Access Application
 Open browser: http://localhost/car-rental-system/
 
-🛡️ Security Features
+**🛡️ Security Features**
 Implemented Security Measures
 Vulnerability	Protection Method
 SQL Injection	Prepared statements with parameter binding
@@ -121,7 +102,7 @@ auth_check.php - Authentication middleware
 
 .htaccess - Web server security rules
 
-📁 Project Structure
+**📁 Project Structure**
 text
 car-rental-system/
 ├── assets/              # Images, icons, static files
@@ -142,7 +123,7 @@ car-rental-system/
 ├── db_connect.php       # Database configuration
 ├── index.php           # Main landing page
 └── README.md           # This file
-🚀 Usage
+**🚀 Usage**
 For Customers
 Register an account
 
@@ -165,7 +146,7 @@ View all bookings
 
 Manage inventory
 
-🧪 Testing
+**🧪 Testing**
 Security Testing
 bash
 # Test SQL injection
@@ -192,14 +173,11 @@ Sanitize all outputs
 
 Follow PHP PSR standards
 
-Comment complex logic
-👨‍💻 Author
-Your Name
 
+**👨‍💻 Author**
+Shubham Virkar
 GitHub: shubhamvir
-
 Student ID: 24243981
-
 Project: Secure Web Applications
 
 
